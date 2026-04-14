@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Media Queries</h1>
+            <p>Responsive design through conditional CSS rules</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What are Media Queries?</h2>
+            <p>Media queries let you apply different styles based on device characteristics like screen width, height, or orientation. They're the foundation of responsive web design, allowing your site to adapt to phones, tablets, and desktops.</p>
+            <p><strong>Key Concept:</strong> Write CSS that only applies when certain conditions are met.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Basic Syntax</h2>
+            <p>Media queries use the @media rule followed by conditions.</p>
+            <div class="code-example">
+                <code>@media (max-width: 768px) { /* styles here */ }</code>
+            </div>
+            <p><strong>Example:</strong> Styles only apply when screen width is 768px or less</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Common Breakpoints</h2>
+            <p>Standard screen size ranges for responsive design.</p>
+            <div class="code-example">
+                <code>/* Mobile */ @media (max-width: 480px) { }</code><br>
+                <code>/* Tablet */ @media (max-width: 768px) { }</code><br>
+                <code>/* Desktop */ @media (min-width: 1024px) { }</code>
+            </div>
+            <p><strong>Tip:</strong> Design mobile-first, then add styles for larger screens using min-width</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>min-width vs max-width</h2>
+            <p>Two approaches to responsive design.</p>
+            <div class="code-example">
+                <code>@media (min-width: 768px) { /* 768px and above */ }</code><br>
+                <code>@media (max-width: 768px) { /* 768px and below */ }</code>
+            </div>
+            <p><strong>Mobile-first approach:</strong> Use min-width (styles for larger screens)</p>
+            <p><strong>Desktop-first approach:</strong> Use max-width (styles for smaller screens)</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Orientation</h2>
+            <p>Target devices based on orientation.</p>
+            <div class="code-example">
+                <code>@media (orientation: portrait) { }</code><br>
+                <code>@media (orientation: landscape) { }</code>
+            </div>
+            <p><strong>Use case:</strong> Adjust layout when phone is rotated</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Combining Conditions</h2>
+            <p>Use 'and' to combine multiple conditions.</p>
+            <div class="code-example">
+                <code>@media (min-width: 768px) and (max-width: 1024px) { }</code>
+            </div>
+            <p><strong>Example:</strong> Styles only for tablets (between 768px and 1024px)</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Print Styles</h2>
+            <p>Special styles for when users print your page.</p>
+            <div class="code-example">
+                <code>@media print { /* hide navigation, adjust colors */ }</code>
+            </div>
+            <p><strong>Common uses:</strong> Hide navigation, remove backgrounds, adjust fonts for printing</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>

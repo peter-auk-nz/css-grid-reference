@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flexbox</h1>
+            <p>One-dimensional layout system for flexible responsive designs</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What is Flexbox?</h2>
+            <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex to fill additional space or shrink to fit smaller spaces. Perfect for navigation bars, card layouts, and centering content.</p>
+            <p><strong>Key Advantage:</strong> Makes alignment and distribution of space incredibly easy, even when item sizes are unknown.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Creating a Flex Container</h2>
+            <p>Turn any element into a flex container to control its children.</p>
+            <div class="code-example">
+                <code>.container { display: flex; }</code>
+            </div>
+            <p><strong>Effect:</strong> Direct children become flex items and line up in a row by default</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>flex-direction</h2>
+            <p>Defines the main axis direction (row or column).</p>
+            <div class="code-example">
+                <code>.container { flex-direction: row; }</code>
+            </div>
+            <p><strong>Values:</strong> row (default, left to right), row-reverse, column (top to bottom), column-reverse</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>justify-content</h2>
+            <p>Aligns items along the main axis (horizontal if row, vertical if column).</p>
+            <div class="code-example">
+                <code>.container { justify-content: center; }</code>
+            </div>
+            <p><strong>Common values:</strong> flex-start, center, flex-end, space-between, space-around, space-evenly</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>align-items</h2>
+            <p>Aligns items along the cross axis (vertical if row, horizontal if column).</p>
+            <div class="code-example">
+                <code>.container { align-items: center; }</code>
+            </div>
+            <p><strong>Common values:</strong> stretch (default), flex-start, center, flex-end, baseline</p>
+            <p><strong>Centering trick:</strong> justify-content: center; align-items: center; (perfect center!)</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>flex-wrap</h2>
+            <p>Controls whether items wrap onto multiple lines.</p>
+            <div class="code-example">
+                <code>.container { flex-wrap: wrap; }</code>
+            </div>
+            <p><strong>Values:</strong> nowrap (default, single line), wrap (multiple lines), wrap-reverse</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>gap</h2>
+            <p>Creates space between flex items.</p>
+            <div class="code-example">
+                <code>.container { gap: 20px; }</code>
+            </div>
+            <p><strong>Example:</strong> 20px space between all items</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>flex (on items)</h2>
+            <p>Controls how flex items grow and shrink. Applied to flex items, not the container.</p>
+            <div class="code-example">
+                <code>.item { flex: 1; }</code>
+            </div>
+            <p><strong>Example:</strong> All items grow equally to fill available space</p>
+            <p><strong>Shorthand for:</strong> flex-grow, flex-shrink, flex-basis</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>
