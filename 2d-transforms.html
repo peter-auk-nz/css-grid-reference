@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2D Transforms - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2D Transforms</h1>
+            <p>Rotate, scale, move, and skew elements in two dimensions</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What are 2D Transforms?</h2>
+            <p>2D transforms let you manipulate elements in two-dimensional space. You can rotate, scale, move, and skew elements without affecting the document flow. Perfect for animations, hover effects, and creative layouts.</p>
+            <p><strong>Key Advantage:</strong> Transforms are hardware-accelerated and don't trigger layout recalculations, making them very performant.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>rotate()</h2>
+            <p>Rotates an element around a fixed point.</p>
+            <div class="code-example">
+                <code>transform: rotate(45deg);</code>
+            </div>
+            <p><strong>Values:</strong> Degrees (deg), turns (turn), radians (rad)</p>
+            <p><strong>Example:</strong> rotate(90deg) rotates 90 degrees clockwise</p>
+            <p><strong>Negative values:</strong> Rotate counterclockwise</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>scale()</h2>
+            <p>Increases or decreases element size.</p>
+            <div class="code-example">
+                <code>transform: scale(1.5);</code><br>
+                <code>transform: scale(2, 0.5);</code>
+            </div>
+            <p><strong>One value:</strong> Scales both width and height equally</p>
+            <p><strong>Two values:</strong> scale(x, y) - horizontal and vertical separately</p>
+            <p><strong>Example:</strong> scale(2) doubles the size, scale(0.5) halves it</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>translate()</h2>
+            <p>Moves an element from its current position.</p>
+            <div class="code-example">
+                <code>transform: translate(50px, 100px);</code>
+            </div>
+            <p><strong>Values:</strong> translate(x, y)</p>
+            <p><strong>Example:</strong> translate(50px, 100px) moves 50px right, 100px down</p>
+            <p><strong>Individual axes:</strong> translateX(50px) or translateY(100px)</p>
+            <p><strong>Centering trick:</strong> translate(-50%, -50%) with position: absolute</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>skew()</h2>
+            <p>Tilts an element along the X or Y axis.</p>
+            <div class="code-example">
+                <code>transform: skew(20deg, 10deg);</code>
+            </div>
+            <p><strong>Values:</strong> skew(x-angle, y-angle)</p>
+            <p><strong>Example:</strong> skew(20deg) tilts horizontally</p>
+            <p><strong>Individual axes:</strong> skewX(20deg) or skewY(10deg)</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>transform-origin</h2>
+            <p>Sets the point around which transformations occur.</p>
+            <div class="code-example">
+                <code>transform-origin: center center;</code><br>
+                <code>transform-origin: top left;</code>
+            </div>
+            <p><strong>Default:</strong> center center (50% 50%)</p>
+            <p><strong>Values:</strong> Keywords (top, bottom, left, right, center) or percentages/pixels</p>
+            <p><strong>Example:</strong> Rotate from top-left corner instead of center</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Multiple Transforms</h2>
+            <p>Combine multiple transform functions in one declaration.</p>
+            <div class="code-example">
+                <code>transform: rotate(45deg) scale(1.5) translate(50px, 0);</code>
+            </div>
+            <p><strong>Order matters:</strong> Functions apply from right to left</p>
+            <p><strong>Example:</strong> Element is first translated, then scaled, then rotated</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Transforms - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>3D Transforms</h1>
+            <p>Manipulate elements in three-dimensional space</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What are 3D Transforms?</h2>
+            <p>3D transforms extend 2D transforms into the third dimension, adding depth to your elements. You can rotate, translate, and scale along the Z-axis, creating perspective effects and realistic 3D animations.</p>
+            <p><strong>Key Concept:</strong> Requires setting up perspective to see the 3D effect properly.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>perspective</h2>
+            <p>Creates the illusion of depth by defining how far the viewer is from the element.</p>
+            <div class="code-example">
+                <code>.parent { perspective: 1000px; }</code>
+            </div>
+            <p><strong>Applied to parent:</strong> Sets perspective for child elements</p>
+            <p><strong>Lower values:</strong> More dramatic perspective (closer view)</p>
+            <p><strong>Higher values:</strong> Subtler perspective (distant view)</p>
+            <p><strong>Typical range:</strong> 500px-2000px</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>rotateX(), rotateY(), rotateZ()</h2>
+            <p>Rotates elements around the X, Y, or Z axis.</p>
+            <div class="code-example">
+                <code>transform: rotateX(45deg);</code><br>
+                <code>transform: rotateY(45deg);</code><br>
+                <code>transform: rotateZ(45deg);</code>
+            </div>
+            <p><strong>rotateX:</strong> Flips top/bottom (horizontal axis)</p>
+            <p><strong>rotateY:</strong> Flips left/right (vertical axis)</p>
+            <p><strong>rotateZ:</strong> Same as 2D rotate (depth axis)</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>translateZ()</h2>
+            <p>Moves elements closer or further from the viewer.</p>
+            <div class="code-example">
+                <code>transform: translateZ(100px);</code>
+            </div>
+            <p><strong>Positive values:</strong> Move toward viewer (larger appearance)</p>
+            <p><strong>Negative values:</strong> Move away from viewer (smaller appearance)</p>
+            <p><strong>Use with perspective:</strong> Create depth effects</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>transform-style</h2>
+            <p>Determines whether children render in 3D space or are flattened.</p>
+            <div class="code-example">
+                <code>.parent { transform-style: preserve-3d; }</code>
+            </div>
+            <p><strong>preserve-3d:</strong> Children maintain their 3D positions</p>
+            <p><strong>flat (default):</strong> Children are flattened to the parent's plane</p>
+            <p><strong>Essential for:</strong> Nested 3D elements like card flips or cubes</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>backface-visibility</h2>
+            <p>Controls whether the back of a rotated element is visible.</p>
+            <div class="code-example">
+                <code>backface-visibility: hidden;</code>
+            </div>
+            <p><strong>visible (default):</strong> Back face is visible (mirrored)</p>
+            <p><strong>hidden:</strong> Back face is invisible</p>
+            <p><strong>Common use:</strong> Card flip effects where you don't want the back showing through</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>3D Cube Example Pattern</h2>
+            <p>Common setup for creating 3D objects like cubes.</p>
+            <div class="code-example">
+                <code>.container { perspective: 1000px; }</code><br>
+                <code>.cube { transform-style: preserve-3d; }</code><br>
+                <code>.face { position: absolute; }</code><br>
+                <code>.front { transform: translateZ(50px); }</code><br>
+                <code>.back { transform: rotateY(180deg) translateZ(50px); }</code>
+            </div>
+            <p><strong>Pattern:</strong> Container with perspective, parent with preserve-3d, faces with specific transforms</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Animations</h1>
+            <p>Create smooth, performant animations with CSS keyframes</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What are CSS Animations?</h2>
+            <p>CSS animations let you animate transitions from one CSS style to another. Unlike transitions which only animate between two states, animations can have multiple intermediate steps using keyframes, giving you precise control over the animation sequence.</p>
+            <p><strong>Key Advantage:</strong> Hardware-accelerated, declarative, and doesn't require JavaScript for basic animations.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>@keyframes</h2>
+            <p>Defines the animation sequence with intermediate steps.</p>
+            <div class="code-example">
+                <code>@keyframes slidein {</code><br>
+                <code>&nbsp;&nbsp;from { transform: translateX(-100%); }</code><br>
+                <code>&nbsp;&nbsp;to { transform: translateX(0); }</code><br>
+                <code>}</code>
+            </div>
+            <p><strong>Syntax:</strong> Define named animation with from/to or percentage steps</p>
+            <p><strong>Percentage method:</strong> 0%, 50%, 100% for multiple steps</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>animation-name</h2>
+            <p>Applies a named keyframe animation to an element.</p>
+            <div class="code-example">
+                <code>.element { animation-name: slidein; }</code>
+            </div>
+            <p><strong>Value:</strong> Name of the @keyframes animation</p>
+            <p><strong>Required:</strong> Must match a defined @keyframes name</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>animation-duration</h2>
+            <p>Sets how long the animation takes to complete one cycle.</p>
+            <div class="code-example">
+                <code>.element { animation-duration: 2s; }</code>
+            </div>
+            <p><strong>Values:</strong> Seconds (s) or milliseconds (ms)</p>
+            <p><strong>Default:</strong> 0s (no animation without this!)</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>animation-timing-function</h2>
+            <p>Controls the speed curve of the animation.</p>
+            <div class="code-example">
+                <code>.element { animation-timing-function: ease-in-out; }</code>
+            </div>
+            <p><strong>Common values:</strong> linear, ease, ease-in, ease-out, ease-in-out</p>
+            <p><strong>Custom:</strong> cubic-bezier(0.1, 0.7, 1.0, 0.1)</p>
+            <p><strong>Effect:</strong> Changes acceleration/deceleration pattern</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>animation-iteration-count</h2>
+            <p>Defines how many times the animation runs.</p>
+            <div class="code-example">
+                <code>.element { animation-iteration-count: 3; }</code><br>
+                <code>.element { animation-iteration-count: infinite; }</code>
+            </div>
+            <p><strong>Number:</strong> Runs that many times</p>
+            <p><strong>infinite:</strong> Runs forever</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>animation-direction</h2>
+            <p>Sets whether the animation plays forward, backward, or alternates.</p>
+            <div class="code-example">
+                <code>.element { animation-direction: alternate; }</code>
+            </div>
+            <p><strong>normal:</strong> Forward each time (default)</p>
+            <p><strong>reverse:</strong> Backward each time</p>
+            <p><strong>alternate:</strong> Forward, then backward, then forward...</p>
+            <p><strong>alternate-reverse:</strong> Backward, then forward, then backward...</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>animation Shorthand</h2>
+            <p>Combine all animation properties in one declaration.</p>
+            <div class="code-example">
+                <code>animation: slidein 2s ease-in-out 1s infinite alternate;</code>
+            </div>
+            <p><strong>Order:</strong> name duration timing-function delay iteration-count direction</p>
+            <p><strong>Minimum:</strong> name and duration</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>animation-delay</h2>
+            <p>Delays the start of the animation.</p>
+            <div class="code-example">
+                <code>.element { animation-delay: 1s; }</code>
+            </div>
+            <p><strong>Positive values:</strong> Wait before starting</p>
+            <p><strong>Negative values:</strong> Start partway through the animation</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>
