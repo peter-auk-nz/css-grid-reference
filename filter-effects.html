@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filter Effects - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Filter Effects</h1>
+            <p>Apply graphical effects like blur, brightness, and contrast to elements</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What are Filter Effects?</h2>
+            <p>CSS filters apply graphical effects to elements, similar to photo editing software. They can blur, adjust colors, add shadows, and transform appearance without needing image editing tools. Filters are hardware-accelerated and work on any element, including images, backgrounds, and text.</p>
+            <p><strong>Key Advantage:</strong> Real-time visual effects without external image editors.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>blur()</h2>
+            <p>Applies a Gaussian blur to the element.</p>
+            <div class="code-example">
+                <code>filter: blur(5px);</code>
+            </div>
+            <p><strong>Values:</strong> Length units (px, rem, em)</p>
+            <p><strong>Example:</strong> blur(5px) creates moderate blur effect</p>
+            <p><strong>Use:</strong> Backgrounds, focus effects, loading states</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>brightness()</h2>
+            <p>Adjusts the brightness of the element.</p>
+            <div class="code-example">
+                <code>filter: brightness(150%);</code>
+            </div>
+            <p><strong>Values:</strong> Percentage or decimal (0% = black, 100% = normal, 200% = double bright)</p>
+            <p><strong>Example:</strong> brightness(50%) darkens by half, brightness(200%) doubles brightness</p>
+            <p><strong>Use:</strong> Darken/lighten images, hover effects</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>contrast()</h2>
+            <p>Adjusts the contrast of the element.</p>
+            <div class="code-example">
+                <code>filter: contrast(200%);</code>
+            </div>
+            <p><strong>Values:</strong> Percentage or decimal (0% = gray, 100% = normal, 200+ = high contrast)</p>
+            <p><strong>Example:</strong> contrast(150%) increases difference between light and dark</p>
+            <p><strong>Use:</strong> Enhance images, create dramatic effects</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>grayscale()</h2>
+            <p>Converts element to grayscale (black and white).</p>
+            <div class="code-example">
+                <code>filter: grayscale(100%);</code>
+            </div>
+            <p><strong>Values:</strong> 0% to 100% (0% = color, 100% = full grayscale)</p>
+            <p><strong>Example:</strong> grayscale(50%) creates partial desaturation</p>
+            <p><strong>Use:</strong> Hover effects (color on hover), vintage looks, disabled states</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>saturate()</h2>
+            <p>Adjusts color saturation (intensity).</p>
+            <div class="code-example">
+                <code>filter: saturate(200%);</code>
+            </div>
+            <p><strong>Values:</strong> Percentage or decimal (0% = grayscale, 100% = normal, 200+ = oversaturated)</p>
+            <p><strong>Example:</strong> saturate(150%) makes colors more vibrant</p>
+            <p><strong>Use:</strong> Enhance photos, create vivid effects</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>hue-rotate()</h2>
+            <p>Rotates colors around the color wheel.</p>
+            <div class="code-example">
+                <code>filter: hue-rotate(90deg);</code>
+            </div>
+            <p><strong>Values:</strong> Degrees (0deg to 360deg)</p>
+            <p><strong>Example:</strong> hue-rotate(180deg) inverts colors to opposite on color wheel</p>
+            <p><strong>Use:</strong> Color variations, theme switching, creative effects</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>invert()</h2>
+            <p>Inverts the colors of the element.</p>
+            <div class="code-example">
+                <code>filter: invert(100%);</code>
+            </div>
+            <p><strong>Values:</strong> 0% to 100% (0% = normal, 100% = fully inverted)</p>
+            <p><strong>Example:</strong> invert(100%) creates negative image effect</p>
+            <p><strong>Use:</strong> Dark mode, creative effects, icons</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>sepia()</h2>
+            <p>Applies a sepia tone (warm brownish tint).</p>
+            <div class="code-example">
+                <code>filter: sepia(100%);</code>
+            </div>
+            <p><strong>Values:</strong> 0% to 100% (0% = normal, 100% = full sepia)</p>
+            <p><strong>Use:</strong> Vintage effects, old photo look</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>drop-shadow()</h2>
+            <p>Adds a drop shadow following the element's shape.</p>
+            <div class="code-example">
+                <code>filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));</code>
+            </div>
+            <p><strong>Syntax:</strong> offset-x offset-y blur-radius color</p>
+            <p><strong>vs box-shadow:</strong> Follows element outline, not box</p>
+            <p><strong>Use:</strong> Shadows on PNG images, irregular shapes</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Multiple Filters</h2>
+            <p>Combine multiple filters for complex effects.</p>
+            <div class="code-example">
+                <code>filter: grayscale(100%) contrast(120%) brightness(90%);</code>
+            </div>
+            <p><strong>Order:</strong> Filters apply left to right</p>
+            <p><strong>Example:</strong> Create vintage high-contrast black and white effect</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>backdrop-filter</h2>
+            <p>Applies filters to the area behind an element.</p>
+            <div class="code-example">
+                <code>backdrop-filter: blur(10px);</code>
+            </div>
+            <p><strong>Use:</strong> Frosted glass effects, blurred backgrounds behind modals</p>
+            <p><strong>Note:</strong> Same filter functions as regular filter property</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>

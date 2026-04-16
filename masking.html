@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Masking - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Masking</h1>
+            <p>Create complex shapes and hide portions of elements using masks</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What is CSS Masking?</h2>
+            <p>CSS masking lets you hide portions of an element using shapes, gradients, or images. Unlike clipping which creates hard edges, masks can have soft transitions and complex patterns. Masks are perfect for creating non-rectangular shapes, fade effects, and artistic compositions.</p>
+            <p><strong>Key Concept:</strong> Black in the mask = visible, white = hidden, gray = partially transparent.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>mask-image</h2>
+            <p>Defines the mask using an image, gradient, or SVG.</p>
+            <div class="code-example">
+                <code>mask-image: url(mask.png);</code><br>
+                <code>mask-image: linear-gradient(black, transparent);</code>
+            </div>
+            <p><strong>Image masks:</strong> Use alpha channel or luminance to determine visibility</p>
+            <p><strong>Gradient masks:</strong> Create fade effects and transitions</p>
+            <p><strong>Note:</strong> Black = visible, white/transparent = hidden</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>mask-size</h2>
+            <p>Controls the size of the mask.</p>
+            <div class="code-example">
+                <code>mask-size: cover;</code><br>
+                <code>mask-size: 100px 200px;</code>
+            </div>
+            <p><strong>Values:</strong> cover, contain, auto, or specific dimensions</p>
+            <p><strong>Like background-size:</strong> Same sizing options</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>mask-position</h2>
+            <p>Positions the mask within the element.</p>
+            <div class="code-example">
+                <code>mask-position: center;</code><br>
+                <code>mask-position: top right;</code>
+            </div>
+            <p><strong>Keywords:</strong> top, bottom, left, right, center</p>
+            <p><strong>Values:</strong> Percentages or lengths (50% 50%, 10px 20px)</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>mask-repeat</h2>
+            <p>Controls whether the mask repeats.</p>
+            <div class="code-example">
+                <code>mask-repeat: no-repeat;</code><br>
+                <code>mask-repeat: repeat;</code>
+            </div>
+            <p><strong>Values:</strong> repeat, no-repeat, repeat-x, repeat-y, space, round</p>
+            <p><strong>Like background-repeat:</strong> Same repetition options</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>mask-mode</h2>
+            <p>Determines how the mask is calculated.</p>
+            <div class="code-example">
+                <code>mask-mode: alpha;</code><br>
+                <code>mask-mode: luminance;</code>
+            </div>
+            <p><strong>alpha:</strong> Uses transparency channel</p>
+            <p><strong>luminance:</strong> Uses brightness of colors (black/white)</p>
+            <p><strong>Default:</strong> Usually alpha for PNG images</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>mask Shorthand</h2>
+            <p>Combines multiple mask properties.</p>
+            <div class="code-example">
+                <code>mask: url(mask.png) center/cover no-repeat;</code>
+            </div>
+            <p><strong>Syntax:</strong> image position/size repeat</p>
+            <p><strong>Like background shorthand:</strong> Same pattern</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Gradient Masks</h2>
+            <p>Create fade effects using gradients as masks.</p>
+            <div class="code-example">
+                <code>/* Fade from top */</code><br>
+                <code>mask-image: linear-gradient(to bottom, black, transparent);</code><br><br>
+                <code>/* Circular fade */</code><br>
+                <code>mask-image: radial-gradient(circle, black 50%, transparent);</code>
+            </div>
+            <p><strong>Use:</strong> Image fades, vignettes, spotlight effects</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Multiple Masks</h2>
+            <p>Combine multiple masks for complex effects.</p>
+            <div class="code-example">
+                <code>mask-image: url(mask1.png), url(mask2.png);</code><br>
+                <code>mask-composite: add;</code>
+            </div>
+            <p><strong>mask-composite:</strong> Determines how masks combine</p>
+            <p><strong>Values:</strong> add, subtract, intersect, exclude</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>clip-path vs mask</h2>
+            <p>Understanding the difference between clipping and masking.</p>
+            <div class="code-example">
+                <code>/* Hard edges */</code><br>
+                <code>clip-path: circle(50%);</code><br><br>
+                <code>/* Soft edges possible */</code><br>
+                <code>mask-image: radial-gradient(circle, black, transparent);</code>
+            </div>
+            <p><strong>clip-path:</strong> Hard edges, geometric shapes, better performance</p>
+            <p><strong>mask:</strong> Soft edges, gradients, complex patterns, more flexible</p>
+            <p><strong>Use clip-path when:</strong> Simple shapes with hard edges</p>
+            <p><strong>Use mask when:</strong> Need soft transitions or complex patterns</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Browser Prefixes</h2>
+            <p>Webkit prefix often needed for mask properties.</p>
+            <div class="code-example">
+                <code>-webkit-mask-image: url(mask.png);</code><br>
+                <code>mask-image: url(mask.png);</code>
+            </div>
+            <p><strong>Note:</strong> Include -webkit- prefix for better browser support</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>

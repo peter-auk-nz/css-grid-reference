@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Blend Modes - Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blend Modes</h1>
+            <p>Control how elements blend with their backgrounds and each other</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+
+        <section class="detail-section">
+            <h2>What are Blend Modes?</h2>
+            <p>Blend modes determine how an element's colors mix with the colors behind it. They work similarly to blending modes in photo editing software like Photoshop. By changing the blend mode, you can create dramatic visual effects, overlays, and color adjustments without editing images.</p>
+            <p><strong>Key Concept:</strong> Blend modes affect how layers interact visually.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>mix-blend-mode</h2>
+            <p>Controls how an element blends with elements behind it.</p>
+            <div class="code-example">
+                <code>.overlay { mix-blend-mode: multiply; }</code>
+            </div>
+            <p><strong>Applies to:</strong> The entire element and its background</p>
+            <p><strong>Use:</strong> Image overlays, text effects, creative compositions</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>background-blend-mode</h2>
+            <p>Controls how multiple background images blend together.</p>
+            <div class="code-example">
+                <code>background-blend-mode: multiply;</code>
+            </div>
+            <p><strong>Use:</strong> Combine background images, create duotones, tint images</p>
+            <p><strong>Works with:</strong> Multiple background-image layers</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Common Blend Modes</h2>
+            <p>Most frequently used blending effects.</p>
+            <div class="code-example">
+                <code>mix-blend-mode: normal; /* Default, no blending */</code><br>
+                <code>mix-blend-mode: multiply; /* Darkens */</code><br>
+                <code>mix-blend-mode: screen; /* Lightens */</code><br>
+                <code>mix-blend-mode: overlay; /* Combines multiply and screen */</code>
+            </div>
+            <p><strong>multiply:</strong> Colors become darker, white disappears</p>
+            <p><strong>screen:</strong> Colors become lighter, black disappears</p>
+            <p><strong>overlay:</strong> Increases contrast, preserves highlights and shadows</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Darken Modes</h2>
+            <p>Blend modes that create darker results.</p>
+            <div class="code-example">
+                <code>mix-blend-mode: darken;</code><br>
+                <code>mix-blend-mode: multiply;</code><br>
+                <code>mix-blend-mode: color-burn;</code>
+            </div>
+            <p><strong>darken:</strong> Keeps darkest color from each layer</p>
+            <p><strong>multiply:</strong> Multiplies colors (always darker unless white)</p>
+            <p><strong>color-burn:</strong> Increases contrast, creates dramatic darks</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Lighten Modes</h2>
+            <p>Blend modes that create lighter results.</p>
+            <div class="code-example">
+                <code>mix-blend-mode: lighten;</code><br>
+                <code>mix-blend-mode: screen;</code><br>
+                <code>mix-blend-mode: color-dodge;</code>
+            </div>
+            <p><strong>lighten:</strong> Keeps lightest color from each layer</p>
+            <p><strong>screen:</strong> Inverse of multiply (always lighter unless black)</p>
+            <p><strong>color-dodge:</strong> Brightens colors, creates glowing effects</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Contrast Modes</h2>
+            <p>Blend modes that adjust contrast.</p>
+            <div class="code-example">
+                <code>mix-blend-mode: overlay;</code><br>
+                <code>mix-blend-mode: soft-light;</code><br>
+                <code>mix-blend-mode: hard-light;</code>
+            </div>
+            <p><strong>overlay:</strong> Multiply dark areas, screen light areas</p>
+            <p><strong>soft-light:</strong> Subtle version of overlay</p>
+            <p><strong>hard-light:</strong> Strong version of overlay</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Color Modes</h2>
+            <p>Blend modes that affect color separately from brightness.</p>
+            <div class="code-example">
+                <code>mix-blend-mode: hue;</code><br>
+                <code>mix-blend-mode: saturation;</code><br>
+                <code>mix-blend-mode: color;</code><br>
+                <code>mix-blend-mode: luminosity;</code>
+            </div>
+            <p><strong>hue:</strong> Uses hue from top, saturation/luminosity from bottom</p>
+            <p><strong>saturation:</strong> Uses saturation from top, hue/luminosity from bottom</p>
+            <p><strong>color:</strong> Uses hue and saturation from top, luminosity from bottom</p>
+            <p><strong>luminosity:</strong> Uses luminosity from top, hue/saturation from bottom</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Difference Modes</h2>
+            <p>Create inverted or unique color effects.</p>
+            <div class="code-example">
+                <code>mix-blend-mode: difference;</code><br>
+                <code>mix-blend-mode: exclusion;</code>
+            </div>
+            <p><strong>difference:</strong> Subtracts colors, creates high contrast</p>
+            <p><strong>exclusion:</strong> Similar to difference but lower contrast</p>
+            <p><strong>Use:</strong> Creative effects, unique color combinations</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Practical Examples</h2>
+            <p>Common use cases for blend modes.</p>
+            <div class="code-example">
+                <code>/* Duotone image effect */</code><br>
+                <code>background: url(image.jpg), linear-gradient(blue, red);</code><br>
+                <code>background-blend-mode: multiply;</code><br><br>
+                <code>/* Text over image */</code><br>
+                <code>h1 { mix-blend-mode: screen; color: white; }</code>
+            </div>
+            <p><strong>Use cases:</strong> Photo tints, text effects, creative overlays, color grading</p>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Reference</a>
+    </div>
+</body>
+</html>
